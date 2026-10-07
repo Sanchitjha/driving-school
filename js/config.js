@@ -1,21 +1,32 @@
 /* ==========================================================================
    SITE CONFIG — yahan ki values badlo, poori site update ho jayegi.
-   (Sab kuch abhi PLACEHOLDER hai. Live karne se pehle asli details daalo.)
+   Khali ("") chhodi hui email / hours site par dikhayi nahi dengi.
    ========================================================================== */
 window.SITE = {
-  brand: "Raahi Driving School",     // school ka naam (header, footer, title)
-  city: "Your City",                 // shehar ka naam
-  phone: "+91 98765 43210",          // page par dikhne wala number
-  tel: "+919876543210",              // call button ke liye (country code ke saath)
-  whatsapp: "919876543210",          // WhatsApp: country code + number, sirf digits
-  email: "hello@example.com",
-  address: "Shop No. 12, Main Road, Your City",
-  hours: "Mon–Sat: 6:00 AM – 8:00 PM",
-  hoursHi: "सोम–शनि: सुबह 6 से रात 8 बजे तक",
-  mapsQuery: "",                     // khali = address se map link banega
-  instagram: "#",                    // "#" ya khali = icon hide ho jayega
+  brand: "Karthikeyan Driving School",
+  brandTa: "கார்த்திகேயன் டிரைவிங் ஸ்கூல்",
+  city: "Chennai",
+  cityTa: "சென்னை",
+
+  phone: "90434 79878",              // page par dikhne wala pehla number
+  tel: "+919043479878",              // pehle number ka call link
+  phone2: "70100 62063",             // dusra number
+  tel2: "+917010062063",
+  whatsapp: "919043479878",          // WhatsApp: country code + number, sirf digits (CONFIRM karo)
+
+  email: "",                         // khali = email wali line hide
+  hours: "",                         // jaise "Mon–Sat: 6:00 AM – 8:00 PM"; khali = hide
+  hoursTa: "",
+
+  address: "Medavakkam Main Rd, Keelkattalai, Chennai – 600117",
+  addressTa: "மேடவாக்கம் மெயின் ரோடு, கீழ்க்கட்டளை, சென்னை – 600117",
+  landmark: "Near Reliance Digital, Keelkattalai Bus Stand",
+  landmarkTa: "ரிலையன்ஸ் டிஜிட்டல் அருகில், கீழ்க்கட்டளை பேருந்து நிறுத்தம்",
+  mapsQuery: "Karthikeyan Driving School, Medavakkam Main Rd, Keelkattalai, Chennai 600117",
+
+  instagram: "#",                    // "#" ya khali = icon hide
   facebook: "#",
-  defaultLang: "hi",                 // "hi" = pehle Hindi, "en" = pehle English
+  defaultLang: "en",                 // "en" ya "ta" (pehle kaun si bhasha dikhe)
   defaultMessage: "Hi, I would like to know about your driving classes.",
   url: ""                            // live site ka address (SEO ke liye, optional)
 };
