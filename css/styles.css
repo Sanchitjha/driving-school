@@ -276,6 +276,17 @@ html[lang="ta"] .split-copy h2 { line-height: 1.45; font-size: clamp(1.5rem, 3vw
 .tip-body h3 { font-size: 1.02rem; color: var(--navy); line-height: 1.4; margin-bottom: 4px; }
 .tip-body p { color: var(--muted); font-size: .9rem; }
 
+/* ---------- gallery ---------- */
+.gallery { columns: 3 260px; column-gap: 18px; }
+.gal {
+  display: block; width: 100%; margin: 0 0 18px; padding: 0; text-align: left; cursor: zoom-in; break-inside: avoid;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.gal:hover { box-shadow: var(--shadow); border-color: #f3d58a; }
+.gal img { width: 100%; height: auto; }
+.gal-cap { display: block; padding: 10px 14px 12px; font-size: .88rem; font-weight: 600; color: var(--navy); line-height: 1.45; }
+
 .lightbox { border: 0; padding: 0; background: transparent; width: min(96vw, 980px); max-width: none; max-height: 94vh; overflow: visible; }
 .lightbox::backdrop { background: rgba(7, 18, 36, .84); }
 .lb-inner { position: relative; background: #fff; border-radius: 18px; overflow: hidden; }

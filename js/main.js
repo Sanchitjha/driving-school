@@ -151,12 +151,12 @@
   if (box && typeof box.showModal === 'function') {
     var boxImg = box.querySelector('img');
     var boxCap = box.querySelector('.lb-cap');
-    $all('.tip').forEach(function (btn) {
+    $all('.tip, .gal').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var img = btn.querySelector('img');
         boxImg.src = img.getAttribute('src');
         boxImg.alt = img.alt;
-        boxCap.textContent = btn.querySelector('h3').textContent;
+        boxCap.textContent = btn.querySelector('h3, .gal-cap').textContent;
         box.showModal();
       });
     });

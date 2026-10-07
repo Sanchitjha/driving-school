@@ -22,9 +22,10 @@ Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் t
 | File | Kahan se aayi / kahan use hoti hai |
 |---|---|
 | `logo.jpg`, `car-red.jpg` | Square yellow poster se crop. Header, footer, hero |
-| `poster-square.jpg` | Original poster (social share image ke liye rakhi hai, page par use nahi) |
-| `women.jpg` | AI se bani photo ka crop. "For women" section |
-| `tip-*.jpg` | Driving tips section (seating, steering, pedals, gears, mirrors, road signs) |
+| `poster-*.jpg`, `office.jpg`, `women-street.jpg` | Gallery section (`#gallery`), click par bada khulta hai. `poster-square.jpg` social share image ke liye bhi kaam aayegi |
+| `poster-small.jpg` | Bahut chhoti (159x318) hai, bada karne par dhundhli dikhegi. Badi file mile to badal do |
+| `women.jpg` | AI se bani photo (`women-street.jpg`) ka crop. "For women" section |
+| `tip-*.jpg` | Driving tips section (seating, steering, pedals, gears, hand brake, mirrors, road signs) |
 | `favicon.svg` | Browser tab icon |
 
 ## YouTube videos
@@ -38,7 +39,8 @@ Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் t
 ## Go-live checklist
 
 - [ ] WhatsApp number confirm karo (`js/config.js`).
-- [ ] Naam ki spelling confirm karo: logo me **Karthikeyan**, kuch AI posters me Kartikeyan / Kartikayan likha hai.
+- [ ] Naam ki spelling confirm karo: logo me **Karthikeyan**, kuch AI posters me Kartikeyan / Kartikayan likha hai. Gallery me `poster-confidence.jpg` (Kartikayan) aur `women-street.jpg` (Kartikeyan) me galat spelling hai, theek karwa lo ya hata do.
+- [ ] Gallery ke AI posters me kuch Tamil lines adhoori / galat hain (jaise ladies poster ki ek line). Padhwa kar theek karwa lo.
 - [ ] Car course ki fee daalo (`index.html`, "Call for fee" ki jagah). 2-wheeler ₹2,999 sirf ek image se liya gaya hai, confirm karo.
 - [ ] Email / timing ho to `js/config.js` me daalo.
 - [ ] Tamil text kisi Tamil bolne wale se ek baar padhwa lo.
