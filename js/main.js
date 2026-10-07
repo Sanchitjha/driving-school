@@ -151,16 +151,42 @@
   if (box && typeof box.showModal === 'function') {
     var boxImg = box.querySelector('img');
     var boxCap = box.querySelector('.lb-cap');
-    $all('.tip, .gal').forEach(function (btn) {
+    $all('.tip, .shot').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var img = btn.querySelector('img');
         boxImg.src = img.getAttribute('src');
         boxImg.alt = img.alt;
-        boxCap.textContent = btn.querySelector('h3, .gal-cap').textContent;
+        boxCap.textContent = btn.querySelector('h3, .shot-cap').textContent;
         box.showModal();
       });
     });
     box.addEventListener('click', function (e) { if (e.target === box || e.target.closest('.lb-close')) { box.close(); } });
+  }
+
+  /* ---------- pictures showcase: arrows + category filter ---------- */
+  var rail = doc.querySelector('.rail');
+  if (rail) {
+    $all('.rail-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var dir = b.classList.contains('prev') ? -1 : 1;
+        var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        rail.scrollBy({ left: dir * Math.max(280, rail.clientWidth * 0.7), behavior: calm ? 'auto' : 'smooth' });
+      });
+    });
+
+    var filters = $all('.filter');
+    var shots = $all('.shot');
+    filters.forEach(function (f) {
+      f.addEventListener('click', function () {
+        var want = f.getAttribute('data-filter');
+        filters.forEach(function (x) { x.setAttribute('aria-pressed', String(x === f)); });
+        shots.forEach(function (s) {
+          var cats = (s.getAttribute('data-cat') || '').split(' ');
+          s.hidden = want !== 'all' && cats.indexOf(want) === -1;
+        });
+        rail.scrollTo({ left: 0, behavior: 'auto' });
+      });
+    });
   }
 
   /* ---------- videos: load the YouTube player only on click ---------- */

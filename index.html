@@ -414,27 +414,36 @@
       </div>
     </section>
 
-    <!-- gallery -->
-    <section class="section soft" id="gallery">
+    <!-- pictures showcase -->
+    <section class="showcase" id="gallery">
       <div class="container">
         <div class="sec-head reveal">
           <span class="eyebrow" data-ta="படங்கள்">Gallery</span>
-          <h2 data-ta="எங்கள் போஸ்டர்கள் & படங்கள்">Our posters &amp; pictures</h2>
-          <p data-ta="பெரிதாகப் பார்க்க படத்தை அழுத்துங்கள்.">Tap a picture to enlarge it.</p>
+          <h2 data-ta="படங்களில் எங்கள் டிரைவிங் ஸ்கூல்">Our driving school in pictures</h2>
+          <p data-ta="படங்களைப் பாருங்கள். பெரிதாகப் பார்க்க ஒன்றை அழுத்துங்கள்.">Browse the pictures. Tap one to enlarge it.</p>
         </div>
-        <div class="gallery">
-          <button class="gal reveal" type="button"><img src="images/poster-square.jpg" alt="Karthikeyan Driving School poster with logo, training car and phone numbers" width="1280" height="1280" loading="lazy"><span class="gal-cap" data-ta="கார்த்திகேயன் டிரைவிங் ஸ்கூல்">Karthikeyan Driving School</span></button>
-          <button class="gal reveal" type="button"><img src="images/poster-tall.jpg" alt="Drive Easy poster: 2 and 4 wheeler training, simulator practice, licence renewal and all RTO works" width="768" height="1376" loading="lazy"><span class="gal-cap" data-ta="டிரைவ் ஈஸி: 2 & 4 வீலர் பயிற்சி, சிமுலேட்டர், RTO வேலைகள்">Drive Easy: 2 &amp; 4 wheeler training, simulator, RTO works</span></button>
-          <button class="gal reveal" type="button"><img src="images/poster-confidence.jpg" alt="Learn to drive with confidence poster with a smiling woman at the wheel" width="896" height="1200" loading="lazy"><span class="gal-cap" data-ta="நம்பிக்கையுடன் ஓட்டக் கற்றுக்கொள்ளுங்கள்">Learn to drive with confidence</span></button>
-          <button class="gal reveal" type="button"><img src="images/poster-ladies-pink.jpg" alt="Special driving training for women poster (pink)" width="714" height="1280" loading="lazy"><span class="gal-cap" data-ta="பெண்களுக்கான சிறப்பு டிரைவிங் பயிற்சி">Special driving training for women</span></button>
-          <button class="gal reveal" type="button"><img src="images/poster-ladies-maroon.jpg" alt="Special driving training for women poster (maroon)" width="714" height="1280" loading="lazy"><span class="gal-cap" data-ta="பெண்களால் பெண்களுக்கு பயிற்சி">Trained by women, for women</span></button>
-          <button class="gal reveal" type="button"><img src="images/office.jpg" alt="Two women discussing licence and RTO consulting at the school office" width="843" height="1264" loading="lazy"><span class="gal-cap" data-ta="உரிமம் உதவி மற்றும் RTO ஆலோசனை">Licence help and RTO consulting</span></button>
-          <button class="gal reveal" type="button"><img src="images/women-street.jpg" alt="Women learners chatting in front of the driving school sign" width="896" height="1200" loading="lazy"><span class="gal-cap" data-ta="பெண்களுக்கான பயிற்சி">Training for women</span></button>
-          <button class="gal reveal" type="button"><img src="images/poster-small.jpg" alt="Poster: RTO related services, LLR online services, LMV and motorcycle training" width="159" height="318" loading="lazy"><span class="gal-cap" data-ta="RTO சேவைகள், LLR, LMV மற்றும் மோட்டார் சைக்கிள் பயிற்சி">RTO services, LLR, LMV and motorcycle training</span></button>
+        <div class="filters" role="group" aria-label="Filter pictures" data-ta-aria="படங்களை வடிகட்ட">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true" data-ta="அனைத்தும்">All</button>
+          <button class="filter" type="button" data-filter="training" aria-pressed="false" data-ta="பயிற்சி">Training</button>
+          <button class="filter" type="button" data-filter="women" aria-pressed="false" data-ta="பெண்களுக்கு">For women</button>
+          <button class="filter" type="button" data-filter="rto" aria-pressed="false" data-ta="RTO & உரிமம்">RTO &amp; licence</button>
         </div>
       </div>
+      <div class="rail-wrap">
+        <button class="rail-btn prev" type="button" aria-label="Previous pictures" data-ta-aria="முந்தைய படங்கள்"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <div class="rail" tabindex="0" role="region" aria-label="Pictures" data-ta-aria="படங்கள்">
+          <button class="shot" type="button" data-cat="training"><img src="images/poster-square.jpg" alt="Karthikeyan Driving School poster with logo, training car and phone numbers" width="1280" height="1280" loading="lazy"><span class="shot-cap" data-ta="கார்த்திகேயன் டிரைவிங் ஸ்கூல்">Karthikeyan Driving School</span></button>
+          <button class="shot" type="button" data-cat="training"><img src="images/poster-tall.jpg" alt="Drive Easy poster: 2 and 4 wheeler training, simulator practice, licence renewal and all RTO works" width="768" height="1376" loading="lazy"><span class="shot-cap" data-ta="டிரைவ் ஈஸி: 2 & 4 வீலர் பயிற்சி, சிமுலேட்டர், RTO வேலைகள்">Drive Easy: 2 &amp; 4 wheeler training, simulator, RTO works</span></button>
+          <button class="shot" type="button" data-cat="training"><img src="images/poster-confidence.jpg" alt="Learn to drive with confidence poster with a smiling woman at the wheel" width="896" height="1200" loading="lazy"><span class="shot-cap" data-ta="நம்பிக்கையுடன் ஓட்டக் கற்றுக்கொள்ளுங்கள்">Learn to drive with confidence</span></button>
+          <button class="shot" type="button" data-cat="women"><img src="images/poster-ladies-pink.jpg" alt="Special driving training for women poster (pink)" width="714" height="1280" loading="lazy"><span class="shot-cap" data-ta="பெண்களுக்கான சிறப்பு டிரைவிங் பயிற்சி">Special driving training for women</span></button>
+          <button class="shot" type="button" data-cat="women"><img src="images/poster-ladies-maroon.jpg" alt="Special driving training for women poster (maroon)" width="714" height="1280" loading="lazy"><span class="shot-cap" data-ta="பெண்களால் பெண்களுக்கு பயிற்சி">Trained by women, for women</span></button>
+          <button class="shot" type="button" data-cat="women"><img src="images/women-street.jpg" alt="Women learners chatting in front of the driving school sign" width="896" height="1200" loading="lazy"><span class="shot-cap" data-ta="பெண்களுக்கான பயிற்சி">Training for women</span></button>
+          <button class="shot" type="button" data-cat="rto"><img src="images/office.jpg" alt="Two women discussing licence and RTO consulting at the school office" width="843" height="1264" loading="lazy"><span class="shot-cap" data-ta="உரிமம் உதவி மற்றும் RTO ஆலோசனை">Licence help and RTO consulting</span></button>
+          <button class="shot shot-native" type="button" data-cat="rto training"><img src="images/poster-small.jpg" alt="Poster: RTO related services, LLR online services, LMV and motorcycle training" width="159" height="318" loading="lazy"><span class="shot-cap" data-ta="RTO சேவைகள், LLR, LMV மற்றும் மோட்டார் சைக்கிள் பயிற்சி">RTO services, LLR, LMV and motorcycle training</span></button>
+        </div>
+        <button class="rail-btn next" type="button" aria-label="Next pictures" data-ta-aria="அடுத்த படங்கள்"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
     </section>
-
     <dialog class="lightbox" id="lightbox" aria-label="Picture">
       <div class="lb-inner">
         <button class="lb-close" type="button" aria-label="Close" data-ta-aria="மூடு"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>

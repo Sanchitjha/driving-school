@@ -276,16 +276,55 @@ html[lang="ta"] .split-copy h2 { line-height: 1.45; font-size: clamp(1.5rem, 3vw
 .tip-body h3 { font-size: 1.02rem; color: var(--navy); line-height: 1.4; margin-bottom: 4px; }
 .tip-body p { color: var(--muted); font-size: .9rem; }
 
-/* ---------- gallery ---------- */
-.gallery { columns: 3 260px; column-gap: 18px; }
-.gal {
-  display: block; width: 100%; margin: 0 0 18px; padding: 0; text-align: left; cursor: zoom-in; break-inside: avoid;
-  background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
-  transition: box-shadow .2s ease, border-color .2s ease;
+/* ---------- showcase (pictures) ---------- */
+.showcase {
+  padding: 84px 0 92px; overflow: hidden; color: #fff;
+  background:
+    radial-gradient(900px 420px at 8% 0%, rgba(255, 255, 0, .12), transparent 60%),
+    linear-gradient(160deg, #0b1f3a 0%, #14396b 100%);
 }
-.gal:hover { box-shadow: var(--shadow); border-color: #f3d58a; }
-.gal img { width: 100%; height: auto; }
-.gal-cap { display: block; padding: 10px 14px 12px; font-size: .88rem; font-weight: 600; color: var(--navy); line-height: 1.45; }
+.showcase .sec-head { margin-bottom: 28px; }
+.showcase .sec-head h2 { color: #fff; }
+.showcase .sec-head p { color: #c3d1e6; }
+.showcase .eyebrow { color: var(--brand-yellow); }
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 auto 30px; padding: 0 16px; }
+.filter {
+  border: 1px solid rgba(255, 255, 255, .3); background: transparent; color: #fff;
+  padding: 9px 20px; border-radius: 999px; font-weight: 600; font-size: .88rem; cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.filter:hover { background: rgba(255, 255, 255, .12); }
+.filter[aria-pressed="true"] { background: var(--brand-yellow); color: var(--navy); border-color: var(--brand-yellow); }
+.rail-wrap { position: relative; }
+.rail {
+  display: flex; align-items: center; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 8px max(16px, calc((100vw - var(--maxw)) / 2)) 26px; scroll-padding-inline: 16px;
+  scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, .4) transparent;
+}
+.rail:focus-visible { outline-offset: -3px; }
+.shot {
+  position: relative; flex: none; scroll-snap-align: center; height: clamp(340px, 58vh, 480px);
+  padding: 0; border: 0; border-radius: 20px; overflow: hidden; background: #0d2a52; cursor: zoom-in;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .38); transition: transform .25s ease;
+}
+.shot:hover { transform: translateY(-6px); }
+.shot img { display: block; height: 100%; width: auto; max-width: none; }
+.shot-native { height: 318px; }
+.shot-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 48px 16px 14px; text-align: left;
+  font-size: .9rem; font-weight: 600; line-height: 1.4; color: #fff;
+  background: linear-gradient(to top, rgba(7, 18, 36, .9), transparent);
+}
+.rail-btn {
+  position: absolute; top: calc(50% - 31px); z-index: 2; display: none; place-items: center; width: 48px; height: 48px;
+  border: 0; border-radius: 50%; background: var(--brand-yellow); color: var(--navy); cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .4); transition: transform .15s ease;
+}
+.rail-btn:hover { transform: scale(1.1); }
+.rail-btn.prev { left: 16px; }
+.rail-btn.next { right: 16px; }
+.rail-btn.prev .ic { transform: rotate(180deg); }
+@media (min-width: 900px) { .rail-btn { display: grid; } }
 
 .lightbox { border: 0; padding: 0; background: transparent; width: min(96vw, 980px); max-width: none; max-height: 94vh; overflow: visible; }
 .lightbox::backdrop { background: rgba(7, 18, 36, .84); }
@@ -394,6 +433,6 @@ body { padding-bottom: 76px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
-  .btn, .card, .tip, .fab { transition: none; }
-  .btn:hover, .card:hover, .tip:hover { transform: none; }
+  .btn, .card, .tip, .shot, .fab { transition: none; }
+  .btn:hover, .card:hover, .tip:hover, .shot:hover { transform: none; }
 }
