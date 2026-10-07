@@ -34,6 +34,7 @@ Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் t
 ## Google rating
 
 `js/config.js` me `googleUrl` (Google Maps listing) aur `googleRating` (abhi 4.8) hain. Rating badalne par yahan update karo, hero aur contact section dono me apne aap badal jayegi.
+
 ## Go-live checklist
 
 - [ ] WhatsApp number confirm karo (`js/config.js`).
