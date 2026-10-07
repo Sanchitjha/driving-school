@@ -30,5 +30,5 @@ window.SITE = {
   facebook: "#",
   defaultLang: "en",                 // "en" ya "ta" (pehle kaun si bhasha dikhe)
   defaultMessage: "Hi, I would like to know about your driving classes.",
-  url: ""                            // live site ka address (SEO ke liye, optional)
+  url: "https://karthikeyan-driving-school.vercel.app"   // live site ka address (SEO ke liye)
 };

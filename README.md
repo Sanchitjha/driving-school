@@ -47,8 +47,13 @@ Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் t
 - [ ] `women.jpg` AI photo hai. Asli students/staff ki photo mile to badal do.
 - [ ] Driving tips ki images web se li gayi hain (kuch par watermark hai). Apni ya licensed images se badalna behtar hai.
 - [ ] `index.html` me `<meta name="robots" content="noindex, nofollow">` wali line delete karo, tab Google site ko index karega.
-- [ ] Live domain milne par `og:image` jodo (`images/poster-square.jpg` use ho sakti hai).
-- [ ] Apna domain Vercel dashboard me jodo (Project → Settings → Domains).
+- [x] Link preview (WhatsApp/Facebook): `og:image` = `images/poster-square.jpg`, address `karthikeyan-driving-school.vercel.app`. Naya address share karo, WhatsApp purane link ka preview yaad rakhta hai.
+- [ ] Apna domain (jaise `karthikeyandrivingschool.in`) kharido aur Vercel me jodo (Project → Settings → Domains). Phir `index.html` me `canonical` / `og:url` / `og:image` aur `js/config.js` ka `url` naye domain se badal do.
+
+## Site addresses
+
+- Main: https://karthikeyan-driving-school.vercel.app
+- Purana (abhi bhi chalta hai): https://driving-school-pi-black.vercel.app
 
 ## Deploy
 
