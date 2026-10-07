@@ -309,14 +309,6 @@ html[lang="ta"] .split-copy h2 { line-height: 1.45; font-size: clamp(1.5rem, 3vw
 }
 .shot:hover { transform: translateY(-6px); }
 .shot img { display: block; height: 100%; width: auto; max-width: none; }
-/* small, low-resolution poster: same card height, shown crisp with the caption below it */
-.shot-native {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
-  width: clamp(240px, 70vw, 300px); padding: 18px 18px 16px;
-  background: radial-gradient(240px 200px at 50% 30%, rgba(255, 255, 0, .16), transparent 70%), #0d2a52;
-}
-.shot-native img { width: auto; height: auto; max-width: 100%; max-height: calc(100% - 96px); border-radius: 12px; box-shadow: 0 10px 24px rgba(0, 0, 0, .4); }
-.shot-native .shot-cap { position: static; padding: 0; background: none; text-align: center; }
 .shot-cap {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 48px 16px 14px; text-align: left;
   font-size: .9rem; font-weight: 600; line-height: 1.4; color: #fff;

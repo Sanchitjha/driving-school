@@ -23,7 +23,7 @@ Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் t
 |---|---|
 | `logo.jpg`, `car-red.jpg` | Square yellow poster se crop. Header, footer, hero |
 | `poster-*.jpg`, `office.jpg`, `women-street.jpg` | Gallery section (`#gallery`), click par bada khulta hai. `poster-square.jpg` social share image ke liye bhi kaam aayegi |
-| `poster-small.jpg` | Bahut chhoti (159x318) hai, bada karne par dhundhli dikhegi. Badi file mile to badal do |
+| `poster-services.jpg` | Chhoti 159x318 poster (RTO services / LLR / LMV / motorcycle) ko 768x1376 me dobara banaya gaya: asli hi-res logo, traffic light aur car (square poster se) + wahi text. Asli badi poster mile to isi naam se badal do |
 | `women.jpg` | AI se bani photo (`women-street.jpg`) ka crop. "For women" section |
 | `tip-*.jpg` | Driving tips section (seating, steering, pedals, gears, hand brake, mirrors, road signs) |
 | `favicon.svg` | Browser tab icon |
