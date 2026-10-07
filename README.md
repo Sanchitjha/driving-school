@@ -1,4 +1,4 @@
-# Karthikeyan Driving School — landing page
+﻿# Karthikeyan Driving School — landing page
 
 Keelkattalai, Chennai. Static site: `index.html` ko browser me kholo (koi build ya install nahi).
 Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் toggle). Pehle kaun si bhasha dikhe, wo `js/config.js` me `defaultLang` se set hota hai.
@@ -7,8 +7,8 @@ Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் t
 
 | Cheez | File |
 |---|---|
-| Naam (English + Tamil), phone numbers, WhatsApp, address, landmark, email, timing, social links | `js/config.js` |
-| Headings, services, courses, prices, FAQ, tips (English text HTML me, Tamil `data-ta="..."` me) | `index.html` |
+| Naam (English + Tamil), phone numbers, WhatsApp, address, landmark, Google Maps link + rating, email, timing, social links | `js/config.js` |
+| Headings, services, courses, prices, FAQ, tips, YouTube videos (English text HTML me, Tamil `data-ta="..."` me) | `index.html` |
 | Colors, fonts, spacing | `css/styles.css` ke upar `:root { ... }` |
 | Logo, car, photos | `images/` (neeche list) |
 | Security headers, caching | `vercel.json` |
@@ -27,6 +27,13 @@ Do bhasha: **English** aur **தமிழ்** (header me EN / தமிழ் t
 | `tip-*.jpg` | Driving tips section (seating, steering, pedals, gears, mirrors, road signs) |
 | `favicon.svg` | Browser tab icon |
 
+## YouTube videos
+
+`index.html` ke `#videos` section me 3 videos hain (school ke apne channel ke). Video badalne ke liye `data-yt="VIDEO_ID"`, `href` aur thumbnail ka `src` (`https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg`) badlo. Player sirf click par load hota hai, isliye page tez rehta hai.
+
+## Google rating
+
+`js/config.js` me `googleUrl` (Google Maps listing) aur `googleRating` (abhi 4.8) hain. Rating badalne par yahan update karo, hero aur contact section dono me apne aap badal jayegi.
 ## Go-live checklist
 
 - [ ] WhatsApp number confirm karo (`js/config.js`).
@@ -47,3 +54,4 @@ vercel deploy --prod --yes
 ```
 
 GitHub se connect hone par har `git push` par Vercel apne aap naya version live kar dega.
+

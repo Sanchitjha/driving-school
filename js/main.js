@@ -20,6 +20,7 @@
       .replace(/\{brand\}/g, pick('brand', 'brandTa') || '')
       .replace(/\{city\}/g, pick('city', 'cityTa') || '')
       .replace(/\{phone\}/g, S.phone || '')
+      .replace(/\{rating\}/g, S.googleRating || '')
       .replace(/\{year\}/g, String(new Date().getFullYear()));
   }
 
@@ -37,7 +38,10 @@
     $all('a[data-mail]').forEach(function (a) { a.href = 'mailto:' + S.email; });
     $all('a[data-wa]').forEach(function (a) { a.href = waLink(a.getAttribute('data-wa-msg')); });
     $all('a[data-maps]').forEach(function (a) {
-      a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(S.mapsQuery || S.address);
+      a.href = S.googleUrl || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(S.mapsQuery || S.address);
+    });
+    $all('a[data-google]').forEach(function (a) {
+      if (S.googleUrl) { a.href = S.googleUrl; a.hidden = false; } else { a.hidden = true; }
     });
     $all('a[data-social]').forEach(function (a) {
       var url = S[a.getAttribute('data-social')];
@@ -158,6 +162,20 @@
     });
     box.addEventListener('click', function (e) { if (e.target === box || e.target.closest('.lb-close')) { box.close(); } });
   }
+
+  /* ---------- videos: load the YouTube player only on click ---------- */
+  $all('a.video[data-yt]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var f = doc.createElement('iframe');
+      f.className = 'video-frame';
+      f.src = 'https://www.youtube-nocookie.com/embed/' + a.getAttribute('data-yt') + '?autoplay=1&rel=0&playsinline=1';
+      f.title = a.getAttribute('aria-label') || 'Video';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      a.replaceWith(f);
+    });
+  });
 
   /* ---------- reveal on scroll ---------- */
   var reveals = $all('.reveal');

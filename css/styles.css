@@ -132,6 +132,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
   font-size: .85rem; font-weight: 500;
 }
 .chip .ic { color: var(--brand-yellow); width: 1.1em; height: 1.1em; }
+.ic-fill { fill: currentColor; stroke: none; }
+a.chip { text-decoration: none; transition: background .15s ease; }
+a.chip:hover { background: rgba(255, 255, 255, .22); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.18; letter-spacing: -.02em; margin: 18px 0 16px; }
 html[lang="ta"] .hero h1 { line-height: 1.4; letter-spacing: 0; font-size: clamp(1.4rem, 5.6vw, 2.9rem); }
 .hero-grid > *, .split > *, .contact-grid > * { min-width: 0; }
@@ -281,6 +285,21 @@ html[lang="ta"] .split-copy h2 { line-height: 1.45; font-size: clamp(1.5rem, 3vw
   position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;
   border: 0; border-radius: 50%; background: var(--navy); color: #fff; cursor: pointer;
 }
+
+/* ---------- videos ---------- */
+.videos { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.video-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.video, .video-frame { display: block; position: relative; width: 100%; aspect-ratio: 16 / 9; border: 0; background: #000; overflow: hidden; }
+.video img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.video:hover img { transform: scale(1.04); }
+.video .play { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(to top, rgba(7, 18, 36, .35), transparent 55%); }
+.play-btn { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 50%; background: var(--amber); color: var(--navy); box-shadow: 0 10px 24px rgba(0, 0, 0, .35); transition: transform .15s ease; }
+.play-btn .ic { width: 26px; height: 26px; margin-left: 3px; }
+.video:hover .play-btn { transform: scale(1.1); }
+.video-body { padding: 16px 18px 20px; }
+.video-body h3 { font-size: 1.02rem; color: var(--navy); line-height: 1.4; margin-bottom: 4px; }
+.video-body p { color: var(--muted); font-size: .9rem; }
+.yt-link { margin-top: 28px; text-align: center; }
 
 /* ---------- faq ---------- */
 .faq { max-width: 800px; margin-inline: auto; display: grid; gap: 12px; }

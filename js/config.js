@@ -18,11 +18,13 @@ window.SITE = {
   hours: "",                         // jaise "Mon–Sat: 6:00 AM – 8:00 PM"; khali = hide
   hoursTa: "",
 
-  address: "Medavakkam Main Rd, Keelkattalai, Chennai – 600117",
-  addressTa: "மேடவாக்கம் மெயின் ரோடு, கீழ்க்கட்டளை, சென்னை – 600117",
+  address: "Bus Stand, 29B, Sarojammal Complex, Medavakkam Main Rd, Keelkattalai, Chennai – 600117",
+  addressTa: "பேருந்து நிறுத்தம், 29B, சரோஜம்மாள் காம்ப்ளக்ஸ், மேடவாக்கம் மெயின் ரோடு, கீழ்க்கட்டளை, சென்னை – 600117",
   landmark: "Near Reliance Digital, Keelkattalai Bus Stand",
   landmarkTa: "ரிலையன்ஸ் டிஜிட்டல் அருகில், கீழ்க்கட்டளை பேருந்து நிறுத்தம்",
   mapsQuery: "Karthikeyan Driving School, Medavakkam Main Rd, Keelkattalai, Chennai 600117",
+  googleUrl: "https://g.co/kgs/Gexx7pm",   // Google Maps listing (directions + reviews); khali = hide
+  googleRating: "4.8",                      // Google par jo rating dikh rahi hai; update karte raho
 
   instagram: "#",                    // "#" ya khali = icon hide
   facebook: "#",
